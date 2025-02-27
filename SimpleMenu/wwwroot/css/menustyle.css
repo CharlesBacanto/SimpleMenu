@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.menu-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 25px;
+}
+.dish-container{
+    border:solid;
+
+}
+.upper-container{
+    height:300px;
+}
+.dish-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    
+}
+.lower-container{
+
+}

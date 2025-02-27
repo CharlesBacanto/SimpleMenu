@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Menu Page";
+}
+
+@model List<DishModel>
+<link rel="stylesheet" href="~/css/menustyle.css" />
+<div class="text-center">
+    <h1 class="display-4">Menu</h1>
+</div>
+<div class="menu-container">
+    @{
+        foreach(var dishData in Model)
+        {
+            
+        <div class="dish-container">
+            <div class="upper-container">
+                <img class="dish-img" src="@dishData.imgUrl" />
+            </div>
+            <div class="lower-container">
+                <div class="lower-left">
+                    <img class="dish-logo" src="" />
+                </div>
+                <div class="lower-right">
+                    <p>@dishData.name</p>
+                    <p>@dishData.price</p>
+                    <a class="btn">Details</a>
+                </div>
+            </div>
+        </div>
+        }
+    }
+</div>

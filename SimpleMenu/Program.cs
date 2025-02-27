@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SimpleMenu.Data;
+
 namespace SimpleMenu
 {
     public class Program
@@ -8,6 +11,8 @@ namespace SimpleMenu
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            var connectionString = builder.Configuration.GetConnectionString("MySQLConn");
+            builder.Services.AddDbContext<SimpleMenuDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             var app = builder.Build();
 
