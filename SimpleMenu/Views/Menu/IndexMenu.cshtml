@@ -3,9 +3,9 @@
 }
 
 @model List<DishModel>
-<link rel="stylesheet" href="~/css/menustyle.css" />
+<link rel="stylesheet" href="/css/menustyle.css" />
 <div class="text-center">
-    <h1 class="display-4">Menu</h1>
+    <h1 class="display-4 menu-title">Menu</h1>
 </div>
 <div class="menu-container">
     @{
@@ -15,15 +15,18 @@
         <div class="dish-container">
             <div class="upper-container">
                 <img class="dish-img" src="@dishData.imgUrl" />
+                <div class="price-tag">
+                        <p class="dish-price">&#8369; @dishData.price</p>
+                </div>
             </div>
             <div class="lower-container">
                 <div class="lower-left">
-                    <img class="dish-logo" src="" />
+                  <img class="dish-logo" src="~/img/Diner logo.png" />
                 </div>
                 <div class="lower-right">
-                    <p>@dishData.name</p>
-                    <p>@dishData.price</p>
-                    <a class="btn">Details</a>
+                    <p class="dish-name">@dishData.name</p>
+                   
+                    <a class="btn detail-btn">Details</a>
                 </div>
             </div>
         </div>

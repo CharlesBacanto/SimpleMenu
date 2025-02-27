@@ -1,25 +1,109 @@
 ﻿body {
+    background-color: #cfafaf;
+}
+p{
+    font-family:Arial, Helvetica, sans-serif;
 }
 
+.menu-title {
+    font-weight: bold;
+    color: #dfdad2;
+    border: solid;
+    border-color: #842e2e;
+    padding: 4px;
+    background-color: #842e2e;
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom:10px;
+}
 .menu-container{
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
     column-gap: 25px;
 }
-.dish-container{
-    border:solid;
-
+.dish-container {
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(132,46,46,0.5);
+    background-color: #cfafaf;
+    border-color: #842e2e;
 }
 .upper-container{
     height:300px;
+    position:relative;
 }
 .dish-img{
     width:100%;
     height:100%;
     object-fit:cover;
     object-position:center;
+    border-radius:4px 4px 0px 0px;
     
 }
 .lower-container{
+    display:grid;
+    grid-template-columns: 80px 1fr;
+    margin-top:8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    column-gap:10px;
+    margin-bottom:10px;
 
+}
+
+.low-left{
+    vertical-align:central;
+}
+
+.dish-logo{
+    width:100%;
+    border-radius:40px;
+}
+.low-right{
+    margin-left:4px;
+}
+
+.dish-name {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #842e2e;
+    margin-bottom:0px;
+}
+
+.price-tag {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: #8b6969;
+    border-radius: 5px;
+    border-width: 1px;
+    border: solid;
+    border-color: #dfdad2;
+}
+.dish-price {
+    padding: 6px 10px;
+    margin-bottom: 0px;
+    color: #dfdad2;
+}
+.detail-btn {
+    border-radius: 5px;
+    background-color: #dfdad2;
+    color: #8b6969;
+    font-weight: bold;
+    display: block;
+    margin-top: 0px;
+    border: solid;
+    border-color: #8b6969;
+    font-size:20px;
+    transition: background-color 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.detail-btn:hover {
+    background-color: #8b6969;
+    color: #dfdad2;
+}
+
+.detail-btn:active{
+    opacity:0.4;
 }
