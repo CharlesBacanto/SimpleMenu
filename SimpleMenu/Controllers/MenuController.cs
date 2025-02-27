@@ -12,8 +12,14 @@ namespace SimpleMenu.Controllers
         {
             _context = context;
         }
-        public IActionResult IndexMenu()
-        {
+        public IActionResult IndexMenu(string? searchTag)
+        {   
+            var searchInDb = _context.TblDish.Where(searchData => searchData.name.Contains(searchTag));
+            var searchDish = searchInDb.ToList();
+            if (!string.IsNullOrEmpty(searchTag))
+            {
+                return View(searchDish);
+            }
             var allDish = _context.TblDish.ToList();
             return View(allDish);
         }
