@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SimpleMenu.Data;
 
 namespace SimpleMenu.Controllers
@@ -16,9 +17,13 @@ namespace SimpleMenu.Controllers
             var allDish = _context.TblDish.ToList();
             return View(allDish);
         }
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View();
+            var dishIdInDb = _context.TblDish
+                .Include(di => di.DishIngredient)
+                .ThenInclude(i => i.Ingredient)
+                .SingleOrDefault(dishId => dishId.id == id);
+            return View(dishIdInDb);
         }
     }
 }

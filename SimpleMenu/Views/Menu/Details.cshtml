@@ -1,8 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@model SimpleMenu.Models.DishModel
+<link rel="stylesheet" href="~/css/details.css" />
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 details-title">Details</h1>
 </div>
+
+<div class="dish-container">
+   
+    <div class="body-container">
+        <div class="left-body">
+            <img class="dish-img"src="@Model.imgUrl" />
+        </div>
+        <div class="right-body">
+            <p class="title">@Model.name</p>
+            <ul>
+               <p class="list-title">
+               Ingredients
+               </p>
+                @{
+                    foreach (var ingredients in Model.DishIngredient)
+                    {
+                        <li>
+                            @ingredients.Ingredient.name
+                        </li>
+                    }
+                }
+            </ul>
+            <a class="btn menu-btn" asp-controller="Menu" asp-action="IndexMenu">Menu</a>
+        </div>
+    </div>
+</div>
+

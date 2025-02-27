@@ -26,7 +26,7 @@
                 <div class="lower-right">
                     <p class="dish-name">@dishData.name</p>
                    
-                    <a class="btn detail-btn">Details</a>
+                    <a class="btn detail-btn" asp-controller="Menu" asp-action="Details" asp-route-id="@dishData.id">Details</a>
                 </div>
             </div>
         </div>
