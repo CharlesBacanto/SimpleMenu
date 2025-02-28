@@ -1,7 +1,12 @@
-﻿
+﻿main {
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+}
 
 body {
-    background-color: #dfdad2
+    background-color: #dfdad2;
 }
 
 p {
@@ -28,9 +33,9 @@ p {
     box-shadow: 0px 0px 5px rgba(132,64,64,0.5);
 }
 
-.body-container{
-    display:grid;
-    grid-template-columns:400px 1fr;
+.body-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
 }
 
 .left-body {
@@ -39,6 +44,7 @@ p {
     border-right: solid;
     border-color: #842e2e;
 }
+
 .title {
     border-bottom: solid;
     text-align: center;
@@ -51,16 +57,19 @@ p {
     color: #dfdad2;
     background-color: #842e2e
 }
+
 .dish-img {
     width: 100%;
-    height:100%;
+    height: 100%;
     object-fit: cover;
-    object-position:center;
+    object-position: center;
 }
 
 .right-body {
     background-color: #cfafaf;
-    border-radius:0px 4px 4px 0px;
+    border-radius: 0px 4px 4px 0px;
+
+
 }
 
 .menu-btn {
@@ -76,13 +85,12 @@ p {
     transition: background-color 0.15s, color 0.15s, opacity 0.15s;
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
-.menu-btn:hover {
-    background-color: #8b6969;
-    color: #dfdad2;
-}
+    .menu-btn:hover {
+        background-color: #8b6969;
+        color: #dfdad2;
+    }
 
 .menu:active {
     opacity: 0.4;
@@ -90,14 +98,12 @@ p {
 
 ul {
     text-align: center;
-  
     margin-bottom: 100px;
     color: #842e2e
 }
 
 .list-title {
-    margin-top:8px;
-    font-size:25px;
-    font-weight:bold;
- 
+    margin-top: 8px;
+    font-size: 25px;
+    font-weight: bold;
 }

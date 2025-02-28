@@ -39,10 +39,19 @@
     font-weight:bold;
 }
 .title-container {
+   
     margin-top:200px;
     border: solid;
     border-width: 2px;
     border-color: #8b6969;
     background-color: #842e2e;
-    border-radius: 25px
+    border-radius: 25px;
+    width: 750px;
+}
+
+main{
+    min-height: 20vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
 }
